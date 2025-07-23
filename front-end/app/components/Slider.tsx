@@ -34,7 +34,8 @@ export default function Slider() {
 
   const next = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  const goTo = (index) => setCurrent(index);
+  const goTo = (index: number) => setCurrent(index);
+
 
   return (
     <div className="relative w-full h-[500px] overflow-hidden">
