@@ -5,6 +5,7 @@ import { Roboto } from 'next/font/google';
 import "./globals.css";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Header />
         <Nav />
         {children}
+        <Footer />
       
 
       </body>
