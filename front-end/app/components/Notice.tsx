@@ -36,7 +36,7 @@ export default function Notice() {
             {[1, 2].map((i) => (
               <div key={i} className="flex gap-8">
                 <Link
-                  href="https://nmpc-ac-bd.s3.us-east-2.amazonaws.com/2025/notice/1743922694-12345.pdf"
+                  href=""
                   target="_blank"
                   className="flex items-center gap-1 text-white hover:underline"
                 >
@@ -44,7 +44,7 @@ export default function Notice() {
                   নিয়োগ পরীক্ষা-২০২৫ এ অংশগ্রহণকারীদের জন্য নির্দেশাবলী
                 </Link>
                 <Link
-                  href="https://nmpc-ac-bd.s3.us-east-2.amazonaws.com/2025/notice/1743916469-CamScanner%2004-06-2025%2010.48.pdf"
+                  href=""
                   target="_blank"
                   className="flex items-center gap-1 text-white hover:underline"
                 >
@@ -52,7 +52,7 @@ export default function Notice() {
                   আসন বিন্যাস
                 </Link>
                 <Link
-                  href="https://nmpc-ac-bd.s3.us-east-2.amazonaws.com/2025/notice/1741613335-333.pdf"
+                  href=""
                   target="_blank"
                   className="flex items-center gap-1 text-white hover:underline"
                 >
@@ -60,7 +60,7 @@ export default function Notice() {
                   বিজ্ঞপ্তির সংশোধনী
                 </Link>
                 <Link
-                  href="https://nmpc-ac-bd.s3.us-east-2.amazonaws.com/2025/notice/1741612447-222.pdf"
+                  href=""
                   target="_blank"
                   className="flex items-center gap-1 text-white hover:underline"
                 >
