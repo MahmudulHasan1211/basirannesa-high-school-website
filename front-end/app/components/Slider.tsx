@@ -1,23 +1,29 @@
-'use client'; // Only if using Next.js 13+ app directory
+'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import logo from '../../public/logo.png'; // ✅ This is okay if you plan to use it later
 
 const slides = [
   {
     id: 1,
-    image: 'https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp',
+    image:
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
   },
   {
     id: 2,
-    image: 'https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp',
+    image:
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_2_penmwm.jpg',
   },
   {
     id: 3,
-    image: 'https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp',
+    image:
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.35_PM_hlpabf.jpg',
   },
   {
     id: 4,
-    image: 'https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp',
+    image:
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753549875/WhatsApp_Image_2025-07-26_at_11.07.57_PM_vnsrx2.jpg',
   },
 ];
 
@@ -27,8 +33,7 @@ export default function Slider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000); // 4 seconds
-
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
@@ -36,39 +41,39 @@ export default function Slider() {
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   const goTo = (index: number) => setCurrent(index);
 
-
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full md:h-[650px] h-[300px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         >
-          <img
+          <Image
             src={slide.image}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            fill
+            className="object-fill" 
           />
         </div>
       ))}
 
-      {/* Arrows */}
+      {/* Navigation Arrows */}
       <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2 z-20">
         <button onClick={prev} className="btn btn-circle">❮</button>
         <button onClick={next} className="btn btn-circle">❯</button>
       </div>
 
-      {/* Indicators */}
+      {/* Slide Indicators */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
+            onClick={() => goTo(index)}
             className={`w-3 h-3 rounded-full ${
               index === current ? 'bg-white' : 'bg-gray-400'
             }`}
-            onClick={() => goTo(index)}
           />
         ))}
       </div>

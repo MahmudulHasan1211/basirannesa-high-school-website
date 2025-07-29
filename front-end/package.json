@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "daisyui": "^5.0.46",
     "next": "15.4.2",
     "react": "19.1.0",

@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
       "./app/**/*.{ts,tsx}",
@@ -18,6 +21,6 @@ module.exports = {
       },
     },
     darkMode: 'class', // or 'media'
-    plugins: [],
+    plugins: [aspectRatio],
   }
   
