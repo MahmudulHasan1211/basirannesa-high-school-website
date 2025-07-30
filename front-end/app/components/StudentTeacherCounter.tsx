@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 export default function StudentTeacherCounter()
 {
     const [scount, setCount] = useState(0);
-    const smaxCount = 150;
+    const smaxCount = ৮৮৮ ;
     const [tcount, setTcount] = useState(0);
-    const tmaxCount = 150;
+    const tmaxCount = ২১;
   
     useEffect(() => {
       const interval = setInterval(() => {
