@@ -21,7 +21,7 @@ export default function Nav() {
 
         {/* Menu Items */}
         <ul
-          className={`absolute top-[50px] left-0 h-[100vh] w-[50%] bg-[#a44a77] text-white z-40 flex flex-col space-y-4 p-4 transition-all duration-300 ease-in-out
+          className={`absolute top-[50px] left-0 h-auto w-[50%] bg-[#a44a77] text-white z-40 flex flex-col space-y-4 p-4 transition-all duration-300 ease-in-out
             ${menuOpen ? "block" : "hidden"}
             md:h-auto md:w-auto md:flex md:flex-row md:static md:bg-transparent md:space-y-0 md:space-x-7 md:items-center md:justify-center md:font-light md:text-white`}
         >
