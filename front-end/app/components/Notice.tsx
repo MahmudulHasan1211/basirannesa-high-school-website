@@ -22,9 +22,9 @@ export default function Notice() {
 
       <div className="border-t-[3px] border-[#a44a77]" />
 
-      <div className="flex bg-[#353683] text-white items-center h-[40px] overflow-hidden">
+      <div className="flex bg-[#353683] text-white items-center justify-start  h-[40px] overflow-hidden">
         {/* Left side - Label */}
-        <div className="flex items-center justify-center w-[150px] min-w-[120px] gap-2 px-3 text-sm font-semibold border-r border-white">
+        <div className="flex items-center md:justify-center w-[90px]   md:w-[150px] min-w-[120px] gap-2 px-3 text-sm font-semibold border-r border-white">
           <i className="fa fa-bell-o text-yellow-400" aria-hidden="true"></i>
           Notice
         </div>

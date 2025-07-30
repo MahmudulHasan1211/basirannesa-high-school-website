@@ -33,14 +33,14 @@ export default function StudentTeacherCounter()
       }, []);
 
     return <div className="w-full bg-[#353683] text-white">
-        <div className="w-60% flex justify-center gap-50 items-center p-8">
+        <div className="w-60% flex justify-center md:gap-50 gap-35 items-center p-8">
         <div className="text-center">
-            <h1 className="text-3xl">Student</h1>
-            <p className="mt-5 text-xl">{scount}</p>
+            <h1 className="text-xl md:text-3xl">Student</h1>
+            <p className="mt-5 text-[18px] md:text-xl">{scount}</p>
         </div>
         <div className="text-center">
-            <h1 className="text-3xl">Teacher</h1>
-            <p className="mt-5 text-xl">{tcount}</p>
+            <h1 className="text-xl md:text-3xl">Teacher</h1>
+            <p className="mt-5 text-[18px] md:text-xl">{tcount}</p>
         </div>
         </div>
     </div>

@@ -4,9 +4,9 @@ import head from "../../public/head.jpeg";
 const Message = () => {
   return (
     <div>
-      <div className="  w-[97%] mx-auto grid grid-cols-2 gap-5 p-5">
-        <div className="bg-[#edf0f2] shadow-md p-6 rounded-md">
-          <h1 className="text-2xl font-bold mb-4 text-green-700 text-center">
+      <div className="  w-[97%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
+        <div className="bg-[#edf0f2] shadow-md p-6 rounded-md inset-shadow-sm">
+          <h1 className="text-xl md:text-2xl font-bold mb-4 text-green-700 text-center">
             প্রধান শিক্ষকের বার্তা
           </h1>
 
@@ -21,7 +21,7 @@ const Message = () => {
             </div>
 
             <div className="flex-1">
-              <p className="text-justify text-[16px] leading-relaxed">
+              <p className="text-justify text-[14px] md:text-[16px] leading-relaxed">
                 শিক্ষা শুধু ডিগ্রি অর্জনের মাধ্যম নয়, বরং একজন মানুষকে আদর্শ ও
                 আলোকিত করে গড়ে তোলার পথ। আমরা বছিরননেছা উচ্চ বিদ্যালয় সবসময়
                 চেষ্টা করি শিক্ষার্থীদের এমনভাবে গড়ে তুলতে, যেন তারা ভবিষ্যতে
@@ -44,8 +44,8 @@ const Message = () => {
           </div>
         </div>
 
-        <div className="bg-[#edf0f2] p-5 rounded-md shadow-md">
-          <h1 className="text-2xl font-bold mb-4 text-[#353683] text-center">জরুরী নাম্বার সমূহ</h1>
+        <div className="bg-[#edf0f2] p-5 rounded-md shadow-md inset-shadow-sm">
+          <h1 className="text-xl md:text-2xl font-bold mb-4 text-[#353683] text-center">জরুরী নাম্বার সমূহ</h1>
           
         </div>
       </div>
