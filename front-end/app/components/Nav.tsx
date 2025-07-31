@@ -25,15 +25,14 @@ export default function Nav() {
             ${menuOpen ? "block" : "hidden"}
             md:h-auto md:w-auto md:flex md:flex-row md:static md:bg-transparent md:space-y-0 md:space-x-7 md:items-center md:justify-center md:font-light md:text-white`}
         >
-          <li>হোম</li>
-          <li>আমাদের সম্পর্কে</li>
-          <li>শিক্ষার্থী</li>
-          <li>শিক্ষক</li>
-          <li>কমিটি</li>
-          <li>গ্যালারি</li>
-          <li>অর্জন</li>
-          <li>জিজ্ঞাসা ও উত্তর</li>
-          <li>যোগাযোগ</li>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Students</li>
+          <li>Teachers</li>
+          <li>Staff</li>
+          <li>Committee</li>
+          <li>Gallery</li>
+          <li>Contact</li>
         </ul>
       </nav>
     </div>
