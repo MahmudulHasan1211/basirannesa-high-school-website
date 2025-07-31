@@ -24,10 +24,13 @@ export default function Notice() {
 
       <div className="flex bg-[#353683] text-white items-center justify-start  h-[40px] overflow-hidden">
         {/* Left side - Label */}
-        <div className="flex items-center md:justify-center w-[90px]   md:w-[150px] min-w-[120px] gap-2 px-3 text-sm font-semibold border-r border-white">
-          <i className="fa fa-bell-o text-yellow-400" aria-hidden="true"></i>
-          Notice
-        </div>
+       <div className="flex items-center md:justify-center w-[90px] md:w-[150px] min-w-[120px] gap-2 px-3 border-r border-white">
+  {/* If you want to include the bell icon, uncomment the line below after setting up Font Awesome */}
+  {/* <i className="far fa-bell text-yellow-400 text-xl"></i> */}
+  
+  <span className="text-2xl  text-[#FFFFFF]">নোটিশ</span>
+</div>
+
 
         {/* Right side - Scrolling Text */}
         <div className="flex-1 overflow-hidden">
@@ -38,15 +41,15 @@ export default function Notice() {
                 <Link
                   href=""
                   target="_blank"
-                  className="flex items-center gap-1 text-white hover:underline"
+                  className="flex items-center text-xl gap-1 text-white hover:underline"
                 >
-                  <i className="fa fa-bell-o text-yellow-400" aria-hidden="true" />
+                  <i className="fa fa-bell-otext-yellow-400" aria-hidden="true" />
                   ভর্তিসংক্রান্ত বিস্তারিত জানার জন্য স্কুল অফিসে যোগাযোগ করুন।
                 </Link>
                 <Link
                   href=""
                   target="_blank"
-                  className="flex items-center gap-1 text-white hover:underline"
+                  className="flex items-center text-xl gap-1 text-white hover:underline"
                 >
                   <i className="fa fa-bell-o text-yellow-400" aria-hidden="true" />
                   ২০২৫ শিক্ষাবর্ষের বার্ষিক পরীক্ষা শুরু হবে ডিসেম্বর মাসে।
@@ -58,15 +61,15 @@ export default function Notice() {
                 >
                   <i className="fa fa-bell-o text-yellow-400" aria-hidden="true" />
                   বিজ্ঞপ্তির সংশোধনী
-                </Link>
+                </Link> */}
                 <Link
                   href=""
                   target="_blank"
-                  className="flex items-center gap-1 text-white hover:underline"
+                  className="flex items-center text-xl gap-1 text-white hover:underline"
                 >
                   <i className="fa fa-bell-o text-yellow-400" aria-hidden="true" />
-                  নিয়োগ বিজ্ঞপ্তি - ২০২৫
-                </Link> */}
+                  সকল শিক্ষার্থীকে ইউনিফর্ম পরিধান করে আসতে অনুরোধ করা যাচ্ছে।
+                </Link>
               </div>
             ))}
           </div>

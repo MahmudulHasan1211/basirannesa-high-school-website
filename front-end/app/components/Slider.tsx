@@ -3,12 +3,11 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-
 const slides = [
   {
     id: 1,
     image:
-      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753549875/WhatsApp_Image_2025-07-26_at_11.07.57_PM_vnsrx2.jpg',
   },
   {
     id: 2,
@@ -23,8 +22,14 @@ const slides = [
   {
     id: 4,
     image:
-      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753549875/WhatsApp_Image_2025-07-26_at_11.07.57_PM_vnsrx2.jpg',
+      'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
   },
+  // add a new image here image 5
+  //  {
+  //   id: 5,
+  //   image:
+  //     'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
+  // },
 ];
 
 export default function Slider() {
@@ -42,40 +47,60 @@ export default function Slider() {
   const goTo = (index: number) => setCurrent(index);
 
   return (
-    <div className="relative w-full md:h-[650px] h-[300px] overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          <Image
-            src={slide.image}
-            alt={`Slide ${index + 1}`}
-            fill
-            className="object-fill" 
-          />
-        </div>
-      ))}
-
-      {/* Navigation Arrows */}
-      <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2 z-20">
-        <button onClick={prev} className="btn btn-circle">❮</button>
-        <button onClick={next} className="btn btn-circle">❯</button>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goTo(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === current ? 'bg-white' : 'bg-gray-400'
+    <div className="w-full h-auto flex justify-center items-center py-6 md:py-12">
+      <div className="relative w-[90vw] md:w-[1000px] h-[350px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === current ? 'opacity-100 z-10' : 'opacity-30 z-0'
             }`}
-          />
+            style={{
+              transform: index === current ? 'translateX(0)' : 'translateX(100%)',
+              transition: 'opacity 1s ease, transform 1s ease',
+            }}
+          >
+            <Image
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="object-cover rounded-lg"
+              priority={index === current}
+            />
+          </div>
         ))}
+
+        {/* Navigation Arrows */}
+        <div className="absolute left-2 right-2 top-1/2 flex justify-between transform -translate-y-1/2 z-20 px-2">
+          <button
+            onClick={prev}
+            className="bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-md"
+            aria-label="Previous slide"
+          >
+            ❮
+          </button>
+          <button
+            onClick={next}
+            className="bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-md"
+            aria-label="Next slide"
+          >
+            ❯
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goTo(index)}
+              className={`w-4 h-4 rounded-full transition-colors duration-300 ${
+                index === current ? 'bg-white' : 'bg-gray-400'
+              }`}
+              aria-label={`Go to slide ${index + 2}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

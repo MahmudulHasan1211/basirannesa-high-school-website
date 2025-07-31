@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 export default function StudentTeacherCounter() {
     const [scount, setCount] = useState(0);
-    const smaxCount =888;
+    const smaxCount = 888;
     const [tcount, setTcount] = useState(0);
-    const tmaxCount = 15;
+    const tmaxCount = 21;
 
     const toBanglaNumber = (num: number): string => {
-      const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-      return num.toString().split('').map(d => banglaDigits[parseInt(d)]).join('');
+        const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+        return num.toString().split('').map(d => banglaDigits[parseInt(d)]).join('');
     };
 
     useEffect(() => {
@@ -37,14 +37,14 @@ export default function StudentTeacherCounter() {
 
     return (
         <div className="w-full bg-[#353683] text-white">
-            <div className="w-60% flex justify-center md:gap-50 gap-35 items-center p-8">
+            <div className="w-full flex justify-center md:gap-50 gap-8 items-center p-8">
                 <div className="text-center">
-                    <h1 className="text-xl md:text-3xl">মোট শিক্ষার্থী</h1>
-                    <p className="mt-5 text-[18px] md:text-xl">{toBanglaNumber(scount)}</p>
+                    <h1 className="text-xl md:text-3xl font-bold">মোট শিক্ষার্থী</h1>
+                    <p className="mt-5 text-xl md:text-4xl font-bold">{toBanglaNumber(scount)}</p>
                 </div>
                 <div className="text-center">
-                    <h1 className="text-xl md:text-3xl">মোট শিক্ষক</h1>
-                    <p className="mt-5 text-[18px] md:text-xl">{toBanglaNumber(tcount)}</p>
+                    <h1 className="text-xl md:text-3xl font-bold">মোট শিক্ষক</h1>
+                    <p className="mt-5 text-xl md:text-4xl font-bold">{toBanglaNumber(tcount)}</p>
                 </div>
             </div>
         </div>
