@@ -28,7 +28,7 @@ export default function Nav() {
     md:h-auto md:w-auto md:flex md:flex-row md:static md:bg-transparent md:space-y-0 md:space-x-7 md:items-center md:justify-center md:font-light md:text-white`}
         >
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
-          <Link href="/"> হোম</Link>
+          <Link  href="/" onClick={() =>setMenuOpen(!menuOpen) }> হোম</Link>
             
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
@@ -38,7 +38,7 @@ export default function Nav() {
             শিক্ষার্থী
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
-          <Link href="/teacher"> শিক্ষক</Link>
+          <Link href="/teacher" onClick={() =>setMenuOpen(!menuOpen) }> শিক্ষক</Link>
            
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
