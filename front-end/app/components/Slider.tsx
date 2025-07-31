@@ -47,7 +47,7 @@ export default function Slider() {
   const goTo = (index: number) => setCurrent(index);
 
   return (
-    <div className="w-full h-auto flex justify-center items-center py-6 md:py-12">
+    <div className="w-full h-auto flex justify-center items-center py-6 md:py-2">
       <div className="relative w-[90vw] md:w-[1000px] h-[350px] md:h-[600px] overflow-hidden rounded-lg shadow-lg">
         {slides.map((slide, index) => (
           <div
