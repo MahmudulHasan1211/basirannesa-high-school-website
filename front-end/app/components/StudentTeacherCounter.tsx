@@ -8,9 +8,9 @@ export default function StudentTeacherCounter() {
     const [tcount, setTcount] = useState(0);
     const tmaxCount = 15;
 
-    const toBanglaNumber = (num) => {
-        const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-        return num.toString().split('').map(d => banglaDigits[d]).join('');
+    const toBanglaNumber = (num: number): string => {
+      const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+      return num.toString().split('').map(d => banglaDigits[parseInt(d)]).join('');
     };
 
     useEffect(() => {

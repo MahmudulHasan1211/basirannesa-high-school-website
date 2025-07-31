@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Slider from "./components/Slider";
 import Notice from "./components/Notice";
 import Message from "./components/Message";

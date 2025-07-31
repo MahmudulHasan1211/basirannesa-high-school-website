@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import logo from '../../public/logo.png'; // ✅ This is okay if you plan to use it later
+
 
 const slides = [
   {
