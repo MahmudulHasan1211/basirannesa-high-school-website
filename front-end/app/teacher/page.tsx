@@ -130,6 +130,186 @@ export default function Teacher() {
             <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
             <p>toffajjol@gmail.com</p>
           </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              প্রধান শিক্ষক
+            </h2>
+            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
+            <p>toffajjol@gmail.com</p>
+          </div>
           {/*  */}
         </div>
       </div>
