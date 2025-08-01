@@ -347,10 +347,13 @@ export default function Teacher() {
               />
             </div>
             <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
-              প্রধান শিক্ষক
+              সহকারী শিক্ষক
             </h2>
-            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
-            <p>toffajjol@gmail.com</p>
+            <p className="mt-1 font-bold">সুফিয়া ইসলাম এ্যানি</p>
+            <p>
+              <a href="mailto:anneislam42@gmail.com">anneislam42@gmail.com</a>
+            </p>
+            <p>01402381461</p>
           </div>
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
@@ -362,10 +365,31 @@ export default function Teacher() {
               />
             </div>
             <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
-              প্রধান শিক্ষক
+              সহকারী শিক্ষক
             </h2>
-            <p className="mt-1">কাজী তোফাজ্জল হোসেন</p>
-            <p>toffajjol@gmail.com</p>
+            <p className="mt-1 font-bold">মো: সাজ্জাদুর রহমান রাসেল</p>
+            <p>
+              <a href="mailto:sajjadurasel07@gmail.com">sajjadurasel07@gmail.com</a>
+            </p>
+            <p>01923273451</p>
+          </div>
+           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              সহকারী শিক্ষিকা
+            </h2>
+            <p className="mt-1 font-bold">রাশেদা</p>
+            <p>
+              <a href="mailto:rashedaakter@gmail.com">rashedaakter@gmail.com</a>
+            </p>
+            <p>01726029401</p>
           </div>
           {/*  */}
         </div>
