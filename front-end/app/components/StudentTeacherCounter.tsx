@@ -8,6 +8,7 @@ export default function StudentTeacherCounter() {
     const [tcount, setTcount] = useState(0);
     const tmaxCount = 21;
 
+
     const toBanglaNumber = (num: number): string => {
         const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
         return num.toString().split('').map(d => banglaDigits[parseInt(d)]).join('');
@@ -44,6 +45,10 @@ export default function StudentTeacherCounter() {
                 </div>
                 <div className="text-center">
                     <h1 className="text-xl md:text-3xl font-bold">মোট শিক্ষক</h1>
+                    <p className="mt-5 text-xl md:text-4xl font-bold">{toBanglaNumber(tcount)}</p>
+                </div>
+                 <div className="text-center">
+                    <h1 className="text-xl md:text-3xl font-bold">শিক্ষার্থী-শিক্ষক অনুপাত</h1>
                     <p className="mt-5 text-xl md:text-4xl font-bold">{toBanglaNumber(tcount)}</p>
                 </div>
             </div>
