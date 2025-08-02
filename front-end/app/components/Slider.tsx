@@ -24,12 +24,6 @@ const slides = [
     image:
       'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
   },
-  // add a new image here image 5
-  //  {
-  //   id: 5,
-  //   image:
-  //     'https://res.cloudinary.com/df7ogazj2/image/upload/v1753547887/WhatsApp_Image_2025-07-26_at_10.35.34_PM_zusytb.jpg',
-  // },
 ];
 
 export default function Slider() {
@@ -67,6 +61,11 @@ export default function Slider() {
               className="object-cover rounded-lg"
               priority={index === current}
             />
+
+            {/* Gradient overlay */}
+            <div
+              className="absolute inset-0 rounded-lg pointer-events-none bg-gradient-to-br from-black/25 to-black/12"
+            />
           </div>
         ))}
 
@@ -97,7 +96,7 @@ export default function Slider() {
               className={`w-4 h-4 rounded-full transition-colors duration-300 ${
                 index === current ? 'bg-white' : 'bg-gray-400'
               }`}
-              aria-label={`Go to slide ${index + 2}`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
