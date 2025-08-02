@@ -40,7 +40,7 @@ const Message = () => {
 
           <div className="mt-6 text-right text-sm">
             <p className="font-bold">ধন্যবাদান্তে</p>
-            <p>কাজী তোফাজ্জল হোসেন</p>
+            <p>কাজী রফিকুল ইসলাম</p>
             <p>প্রধান শিক্ষক, বছিরননেছা উচ্চ বিদ্যালয়</p>
           </div>
         </div>
