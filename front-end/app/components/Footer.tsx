@@ -3,19 +3,35 @@ export default function Footer() {
     <div>
       <footer className="footer sm:footer-horizontal bg-[#1b3545] text-white p-10">
         <nav>
-          <h6 className="footer-title">CONTACT</h6>
+          <h6 className="footer-title text-xl font-bold">যোগাযোগ করুন</h6>
           
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <a className="link link-hover">মুন্সীগঞ্জ সদর, মুন্সীগঞ্জ</a>
+          <a className="link link-hover">প্রতিষ্ঠান কোড : -৩৫০৫, ইআইআইএন-১১১১৪০</a>
+          <a className="link link-hover">ইমেইল: basirannesaschool@gmail.com</a>
+          <a className="link link-hover">মোবাইল - 01309111140</a>
         </nav>
         <nav>
-          <h6 className="footer-title">FEATURED LINKS</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <h6 className="footer-title text-xl font-bold">গুরুত্বপূর্ণ লিঙ্ক</h6>
+         <a href="https://www.dhakaeducationboard.gov.bd/site/" target="_blank">
+           ঢাকা শিক্ষা বোর্ড (Dhaka Education Board)
+        </a>
+
+          <a href="https://www.shed.gov.bd/" target="_blank">
+          মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ (Secondary & Higher Education Division)
+        </a>
+
+         <a href="https://dshe.gov.bd/" target="_blank">
+         মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (Directorate of Secondary and Higher Education)
+        </a>
+
+         <a href="https://www.shed.gov.bd/" target="_blank">
+       মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ (Secondary and Higher Education Division)
+        </a>
+        <a href="https://eboardresults.com/v2/home" target="_blank" rel="noopener noreferrer">
+      পরীক্ষার ফলাফল অনলাইন (Exam Results Online)
+      </a>
+
+
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
@@ -39,7 +55,7 @@ export default function Footer() {
           </svg>
           <p>
           <h6>© 2025 Basirannesa High School. All rights reserved.</h6>
-          <p>Developed by </p>
+          <p>Developed by Team MR</p>
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
