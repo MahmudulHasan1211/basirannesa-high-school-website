@@ -34,10 +34,8 @@ export default function Footer() {
 
         </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <h6 className="footer-title text-xl">বছিরননেছা উচ্চ বিদ্যালয়, মানচিত্র</h6>
+          {/* Maps will be added here  */}
         </nav>
       </footer>
       <footer className="footer bg-[#1b3545] text-white border-base-300 border-t px-10 py-4">
@@ -55,7 +53,7 @@ export default function Footer() {
           </svg>
           <p>
           <h6>© 2025 Basirannesa High School. All rights reserved.</h6>
-          <p>Developed by Team MR</p>
+          <p>Developed by Team <span className="font-bold color-[red]">MR</span></p>
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">

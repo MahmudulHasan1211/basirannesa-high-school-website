@@ -62,6 +62,9 @@ export default function Nav() {
             অর্জন
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
+            ফলাফল
+          </li>
+          <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
             জিজ্ঞাসা ও উত্তর
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
