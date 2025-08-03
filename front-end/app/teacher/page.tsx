@@ -7,7 +7,7 @@ export default function Teacher() {
       <h1 className="text-2xl p-3">সকল শিক্ষকের তথ্য</h1>
       <div className="border-t-[3px] border-[#a44a77]" />
       <div className="w-[90%] h-auto p-3 mx-auto ">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-7 ">
           {/*  */}
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
@@ -205,7 +205,7 @@ export default function Teacher() {
             </h2>
             <p className="mt-1 font-bold">মো:ওমর ফারুক</p>
             <p>
-              <a href="mailto:omarfaruk130@gmail.com">omarfaruk130@gmail.com</a>
+              <a href="mailto:sheikhfaruq130@gmail.com">sheikhfaruq130@gmail.com</a>
             </p>
             <p>01921856445</p>
           </div>
@@ -390,6 +390,42 @@ export default function Teacher() {
               <a href="mailto:rashedaakter@gmail.com">rashedaakter@gmail.com</a>
             </p>
             <p>01726029401</p>
+          </div>
+          <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              কম্পিউটার ল্যাব অপারেটর
+            </h2>
+            <p className="mt-1 font-bold">মোঃ শামসুল আলম</p>
+            <p>
+              <a href=""></a>
+            </p>
+            <p>01946-139925</p>
+          </div>
+           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
+            <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
+              <Image
+                src={head}
+                alt="Picture of the author"
+                fill
+                className="object-cover rounded transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
+              অফিস সহকারি
+            </h2>
+            <p className="mt-1 font-bold">মোঃ জিয়াউর রহমান</p>
+            <p>
+              <a href="mailto:"></a>
+            </p>
+            <p>01715-371589</p>
           </div>
           {/*  */}
         </div>
