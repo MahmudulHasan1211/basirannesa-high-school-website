@@ -405,7 +405,7 @@ export default function Teacher() {
             </h2>
             <p className="mt-1 font-bold">মোঃ শামসুল আলম</p>
             <p>
-              <a href=""></a>
+              <a href="mailto:shamsulsajib@gmail.com">shamsulsajib@gmail.com</a>
             </p>
             <p>01946-139925</p>
           </div>
@@ -423,7 +423,7 @@ export default function Teacher() {
             </h2>
             <p className="mt-1 font-bold">মোঃ জিয়াউর রহমান</p>
             <p>
-              <a href="mailto:"></a>
+              <a href="mailto:ziaurbnhs@gmail.com">ziaurbnhs@gmail.com</a>
             </p>
             <p>01715-371589</p>
           </div>

@@ -6,7 +6,7 @@ export default function StudentTeacherCounter() {
     const [scount, setCount] = useState(0);
     const smaxCount = 888;
     const [tcount, setTcount] = useState(0);
-    const tmaxCount = 21;
+    const tmaxCount = 23;
 
 
     const toBanglaNumber = (num: number): string => {
