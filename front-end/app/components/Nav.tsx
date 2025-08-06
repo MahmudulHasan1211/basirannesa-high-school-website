@@ -35,10 +35,11 @@ export default function Nav() {
             আমাদের সম্পর্কে
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
-            শিক্ষার্থী
+            <Link href="/student" onClick={() =>setMenuOpen(!menuOpen) }>শিক্ষার্থী</Link>
+            
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
-          <Link href="/teacher" onClick={() =>setMenuOpen(!menuOpen) }> শিক্ষক</Link>
+          <Link href="/teacher" > শিক্ষক</Link>
            
           </li>
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
