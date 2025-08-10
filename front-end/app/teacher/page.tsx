@@ -1,5 +1,30 @@
 import Image from "next/image";
 import head from "../../public/head.jpeg";
+import nazrul from "../../public/nazrul.jpeg"
+import mustafizur from "../../public/mustafizur.jpeg"
+import boss from "../../public/boss.jpeg"
+import mahbubsir from "../../public/mahbubsir.jpeg"
+import mojibur from "../../public/mojibur.jpeg"
+import laily from "../../public/laily.jpeg"
+import sankar from "../../public/sankar.jpeg"
+import farida from "../../public/farida.jpeg"
+import delowar from "../../public/delowar.jpeg"
+import faruk from "../../public/faruk.jpeg"
+import shajahan from "../../public/shajahan.jpeg"
+import saidur from "../../public/saidur.jpeg"
+import mahmuda from "../../public/mahmuda.jpeg"
+import rasel from "../../public/rasel.jpeg"
+
+import jasim from "../../public/jasim.jpeg"
+import bipul from "../../public/bipul.jpeg"
+import anne from "../../public/anne.jpeg"
+import zia from "../../public/zia.jpeg"
+// import zia from "../../public/zia.jpeg"
+
+
+
+
+
 
 export default function Teacher() {
   return (
@@ -32,7 +57,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={nazrul}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -50,7 +75,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={mustafizur}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -68,7 +93,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={boss}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -86,7 +111,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={mahbubsir}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -104,7 +129,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={mojibur}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -122,14 +147,14 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={laily}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
               />
             </div>
             <h2 className=" text-[16px] font-semibold bg-[#353683] text-white p-1 rounded-b-lg">
-                সিনিয়র শিক্ষক
+                সিনিয়র শিক্ষিকা
             </h2>
             <p className="mt-1 font-bold">লাইলি আক্তার</p>
              <p>
@@ -140,7 +165,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={sankar}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -158,7 +183,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={farida}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -176,7 +201,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={delowar}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -194,7 +219,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={faruk}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -212,7 +237,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={shajahan}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -230,7 +255,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={saidur}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -249,7 +274,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={mahmuda}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -268,7 +293,7 @@ export default function Teacher() {
            <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={jasim}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -304,7 +329,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={bipul}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -340,7 +365,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={anne}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -358,7 +383,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={rasel}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -412,7 +437,7 @@ export default function Teacher() {
            <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={zia}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
