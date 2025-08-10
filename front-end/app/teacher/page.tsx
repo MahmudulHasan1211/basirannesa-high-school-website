@@ -14,12 +14,16 @@ import shajahan from "../../public/shajahan.jpeg"
 import saidur from "../../public/saidur.jpeg"
 import mahmuda from "../../public/mahmuda.jpeg"
 import rasel from "../../public/rasel.jpeg"
-
+import johirul from "../../public/johirul.jpeg"
 import jasim from "../../public/jasim.jpeg"
 import bipul from "../../public/bipul.jpeg"
 import anne from "../../public/anne.jpeg"
 import zia from "../../public/zia.jpeg"
-// import zia from "../../public/zia.jpeg"
+import tanjila from "../../public/tanjila.jpeg"
+import raseda from "../../public/raseda.jpeg"
+import sajeeb from "../../public/sajeeb.jpeg"
+
+
 
 
 
@@ -311,7 +315,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={johirul}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -322,7 +326,7 @@ export default function Teacher() {
             </h2>
             <p className="mt-1 font-bold">জহিরুল ইসলাম</p>
             <p>
-              <a href="mailto:jahirulislam1993linkon@gmail.com">jahirulislam1993linkon@gmail.com</a>
+              <a href="mailto:jahirulislam1993linkon@gmail.com">jahirulislam1993linkon@gmail</a>
             </p>
             <p>01924739786</p>
           </div>
@@ -347,7 +351,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={tanjila}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -401,7 +405,7 @@ export default function Teacher() {
            <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={raseda}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
@@ -419,7 +423,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={sajeeb}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"
