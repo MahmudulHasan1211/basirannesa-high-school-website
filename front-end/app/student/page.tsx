@@ -24,9 +24,7 @@ export default function Student() {
             <td className="border border-black p-2 text-center">13</td>
             <td className="border border-black p-2 text-center">37</td>
             <td className="border border-black p-2 text-center">50</td>
-            <td className="border border-black p-2 text-center" rowSpan={5}>
-              ৮৮৮
-            </td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>172</td>
           </tr>
 
           <tr>
@@ -34,8 +32,6 @@ export default function Student() {
             <td className="border border-black p-2 text-center">13</td>
             <td className="border border-black p-2 text-center">38</td>
             <td className="border border-black p-2 text-center">51</td>
-            <td className="border border-black p-2 text-center">৫৫</td>
-            <td className="border border-black p-2 text-center">৯১</td>
           </tr>
 
           <tr>
@@ -43,8 +39,6 @@ export default function Student() {
             <td className="border border-black p-2 text-center">71</td>
             <td className="border border-black p-2 text-center"></td>
             <td className="border border-black p-2 text-center">71</td>
-            <td className="border border-black p-2 text-center">৫৬</td>
-            <td className="border border-black p-2 text-center">৭০</td>
           </tr>
 
           <tr>
@@ -55,55 +49,140 @@ export default function Student() {
           </tr>
 
           <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
-          </tr>
-                    <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
-          </tr>
-                    <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
-          </tr>
-                    <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
-          </tr>
-                    <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>02</td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>১০ম</td>
+            <td className="border border-black p-2 text-center">গোলাপ</td>
+            <td className="border border-black p-2 text-center">17</td>
+            <td className="border border-black p-2 text-center">34</td>
+            <td className="border border-black p-2 text-center">51</td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>191</td>
           </tr>
 
           <tr>
-            <td className="border border-black p-2 text-center">০৫</td>
-            <td className="border border-black p-2 text-center">১০ম</td>
-            <td className="border border-black p-2 text-center">বাস্তক</td>
-            <td className="border border-black p-2 text-center">৭৫</td>
-            <td className="border border-black p-2 text-center">৮০</td>
-            <td className="border border-black p-2 text-center">১৫৫</td>
+            <td className="border border-black p-2 text-center">শাপলা</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">65</td>
+            <td className="border border-black p-2 text-center">65</td>
+            
           </tr>
 
+          <tr>
+            <td className="border border-black p-2 text-center">পদ্মা</td>
+            <td className="border border-black p-2 text-center">75</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">৭৫</td>
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">92</td>
+            <td className="border border-black p-2 text-center">99</td>
+            <td className="border border-black p-2 text-center">191</td>
+          </tr>
+
+          <tr>
+            <td className="border border-black p-2 text-center" rowSpan={4}>02</td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>১০ম</td>
+            <td className="border border-black p-2 text-center">গোলাপ</td>
+            <td className="border border-black p-2 text-center">17</td>
+            <td className="border border-black p-2 text-center">34</td>
+            <td className="border border-black p-2 text-center">51</td>
+            <td className="border border-black p-2 text-center" rowSpan={4}>191</td>
+          </tr>
+
+          <tr>
+            <td className="border border-black p-2 text-center">শাপলা</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">65</td>
+            <td className="border border-black p-2 text-center">65</td>
+            
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">পদ্মা</td>
+            <td className="border border-black p-2 text-center">75</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">৭৫</td>
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">92</td>
+            <td className="border border-black p-2 text-center">99</td>
+            <td className="border border-black p-2 text-center">191</td>
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center" rowSpan={3}>02</td>
+            <td className="border border-black p-2 text-center" rowSpan={3}>১০ম</td>
+            <td className="border border-black p-2 text-center">গোলাপ</td>
+            <td className="border border-black p-2 text-center">17</td>
+            <td className="border border-black p-2 text-center">34</td>
+            <td className="border border-black p-2 text-center">51</td>
+            <td className="border border-black p-2 text-center" rowSpan={3}>191</td>
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">শাপলা</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">65</td>
+            <td className="border border-black p-2 text-center">65</td>
+            
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">পদ্মা</td>
+            <td className="border border-black p-2 text-center">75</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">৭৫</td>
+          </tr>
+                    {/* <tr>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">92</td>
+            <td className="border border-black p-2 text-center">99</td>
+            <td className="border border-black p-2 text-center">191</td>
+          </tr> */}
+                   
+          <tr>
+            <td className="border border-black p-2 text-center" rowSpan={3}>02</td>
+            <td className="border border-black p-2 text-center" rowSpan={3}>১০ম</td>
+            <td className="border border-black p-2 text-center">গোলাপ</td>
+            <td className="border border-black p-2 text-center">17</td>
+            <td className="border border-black p-2 text-center">34</td>
+            <td className="border border-black p-2 text-center">51</td>
+            <td className="border border-black p-2 text-center" rowSpan={3}>191</td>
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">শাপলা</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">65</td>
+            <td className="border border-black p-2 text-center">65</td>
+            
+          </tr>
+          
+          <tr>
+            <td className="border border-black p-2 text-center">পদ্মা</td>
+            <td className="border border-black p-2 text-center">75</td>
+            <td className="border border-black p-2 text-center"></td>
+            <td className="border border-black p-2 text-center">৭৫</td>
+          </tr>
+                    {/* <tr>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">92</td>
+            <td className="border border-black p-2 text-center">99</td>
+            <td className="border border-black p-2 text-center">191</td>
+          </tr> */}
+                   
+          <tr>
+            <td className="border border-black p-2 text-center" colSpan={2}></td>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">মোট</td>
+            <td className="border border-black p-2 text-center">মোট</td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
