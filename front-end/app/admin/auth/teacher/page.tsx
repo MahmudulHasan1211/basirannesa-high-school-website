@@ -1,30 +1,43 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
+interface TeacherForm {
+  name: string;
+  email: string;
+  phone: string;
+  designation: string;
+  avatar: string | null;
+}
+
+interface Teacher extends TeacherForm {
+  id: number;
+}
 export default function TeachersPage() {
-  const [teachers, setTeachers] = useState([]);
-  const [form, setForm] = useState({
+  const [teachers, setTeachers] = useState<Teacher[]>([]);
+  const [form, setForm] = useState<TeacherForm>({
+    name: "",
     email: "",
     phone: "",
     designation: "",
-    avatar: null, // store as file or preview URL
+    avatar: null,
   });
-
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleAvatarChange = (e) => {
-    const file = e.target.files[0];
+  const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
       setForm({ ...form, avatar: URL.createObjectURL(file) });
     }
   };
 
   const addTeacher = () => {
-    if (!form.email || !form.phone || !form.designation) return;
-    setTeachers([...teachers, { ...form, id: Date.now() }]);
+    if (!form.name || !form.email || !form.phone || !form.designation) return;
+    setTeachers([...teachers, { ...form, id: Date.now() }]); // ✅ valid
     setForm({
+      name: "",
       email: "",
       phone: "",
       designation: "",
@@ -32,14 +45,21 @@ export default function TeachersPage() {
     });
   };
 
-  const deleteTeacher = (id) => {
+  const deleteTeacher = (id: number) => {
     setTeachers(teachers.filter((t) => t.id !== id));
   };
 
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="text-2xl font-bold mb-4">Add Teacher</h1>
-      <div className="grid gap-3 mb-6 max-w-md">
+      <div className="grid gap-3 mb-6 max-w-md w-full">
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Name"
+          className="border p-2"
+        />
         <input
           name="email"
           value={form.email}
@@ -76,7 +96,7 @@ export default function TeachersPage() {
       </div>
 
       <h2 className="text-xl font-bold mb-2">Teacher List</h2>
-      <div className="grid gap-4">
+      <div className="grid gap-4 w-full max-w-lg">
         {teachers.map((t) => (
           <div
             key={t.id}
@@ -84,18 +104,21 @@ export default function TeachersPage() {
           >
             <div className="flex items-center gap-4">
               {t.avatar ? (
-                <img
+                <Image
                   src={t.avatar}
                   alt="avatar"
-                  className="w-12 h-12 rounded-full object-cover"
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
                 />
               ) : (
                 <div className="w-12 h-12 rounded-full bg-gray-300"></div>
               )}
               <div>
-                <p>Email: {t.email}</p>
-                <p>Phone: {t.phone}</p>
-                <p>Designation: {t.designation}</p>
+                <p><strong>Name:</strong> {t.name}</p>
+                <p><strong>Email:</strong> {t.email}</p>
+                <p><strong>Phone:</strong> {t.phone}</p>
+                <p><strong>Designation:</strong> {t.designation}</p>
               </div>
             </div>
             <button
