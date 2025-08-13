@@ -49,7 +49,7 @@ export default function Nav() {
           {/* Gallery with submenu */}
           <li className="relative text-xl font-bold cursor-pointer hover:text-[#008000] group">
             গ্যালারি
-            <ul className="absolute left-0 top-full mt-2 bg-[#a44a77] text-white  shadow-lg opacity-1 group-hover:opacity-100 transition-opacity duration-300 w-40 z-50 flex flex-col space-y-2 p-2">
+            <ul className="absolute left-0 top-full mt-2 bg-[#a44a77] text-white  shadow-lg opacity-1 group-hover:opacity-100 transition-opacity duration-300 w-40 z-500 flex flex-col space-y-2 p-2">
               <li className="cursor-pointer hover:text-[#008000] px-1 py-1 rounded">
                 ছবি
               </li>
@@ -71,7 +71,10 @@ export default function Nav() {
           <li className="text-xl font-bold cursor-pointer hover:text-[#008000]">
             যোগাযোগ
           </li>
+
         </ul>
+            
+            <button className="absolute right-5 text-white top-[-50%] bottom-[-50%] text-xl">লগইন</button>
       </nav>
     </div>
   );
