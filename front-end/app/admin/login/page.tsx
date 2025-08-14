@@ -1,16 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 export default function TeacherLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+   const router = useRouter();
+
+  useEffect(()=>{
+    const cheackLogin= async ()=>{
+     
+      try {
+        const response= await axios.get(`http://localhost:5000/login/me`,{
+          withCredentials: true,
+        })
+        if(response.status==200)
+        {
+          router.push('/admin/auth/home');
+        }
+        else{
+          router.push('/admin/login');
+        }
+      } catch (error) {
+        router.push('/admin/login');
+      }
+    };
+    cheackLogin();
+  },[]);
+
   // Correct event type for form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Teacher Email:", email);
     console.log("Password:", password);
+    try {
+      const response= await axios.post(`http://localhost:5000/login`, {email,password}, {
+        withCredentials: true,
+      })
+      console.log(response);
+      router.push('/admin/auth/home');
+    } catch (error) {
+      console.log(error)
+    }
     // TODO: Send data to your API route in /api/teacher/login
   };
 

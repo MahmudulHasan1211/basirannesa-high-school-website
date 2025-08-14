@@ -1,6 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface TeacherForm {
   name: string;
@@ -35,7 +37,7 @@ export default function TeachersPage() {
 
   const addTeacher = () => {
     if (!form.name || !form.email || !form.phone || !form.designation) return;
-    setTeachers([...teachers, { ...form, id: Date.now() }]); // ✅ valid
+    setTeachers([...teachers, { ...form, id: Date.now() }]); 
     setForm({
       name: "",
       email: "",
@@ -48,6 +50,28 @@ export default function TeachersPage() {
   const deleteTeacher = (id: number) => {
     setTeachers(teachers.filter((t) => t.id !== id));
   };
+  const router = useRouter();
+   useEffect(()=>{
+      const cheackLogin= async ()=>{
+       
+        try {
+          const response= await axios.get(`http://localhost:5000/login/me`,{
+            withCredentials: true,
+          })
+          if(response.status==200)
+          {
+            // router.push('/admin/auth/teacher');
+            console.log("auto login")
+          }
+          else{
+            router.push('/admin/login');
+          }
+        } catch (error) {
+          router.push('/admin/login');
+        }
+      };
+      cheackLogin();
+    },[]);
 
   return (
     <div className="flex flex-col items-center justify-center">

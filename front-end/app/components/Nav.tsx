@@ -74,7 +74,7 @@ export default function Nav() {
 
         </ul>
             
-            <button className="absolute right-5 text-white top-[-50%] bottom-[-50%] text-xl">লগইন</button>
+            <button className="absolute right-5 text-white text-bold top-[-50%] bottom-[-50%] text-xl"><Link  href="/admin/login" onClick={() =>setMenuOpen(!menuOpen) }> লগইন</Link></button>
       </nav>
     </div>
   );
