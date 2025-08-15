@@ -9,12 +9,13 @@ interface TeacherForm {
   email: string;
   phone: string;
   designation: string;
-  avatar: string | null;
+  avatar: File | null; // Store file itself for upload
 }
 
 interface Teacher extends TeacherForm {
   id: number;
 }
+
 export default function TeachersPage() {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [form, setForm] = useState<TeacherForm>({
@@ -24,54 +25,71 @@ export default function TeachersPage() {
     designation: "",
     avatar: null,
   });
+
+  const router = useRouter();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setForm({ ...form, avatar: URL.createObjectURL(file) });
+    const file = e.target.files?.[0] || null;
+    setForm({ ...form, avatar: file });
+  };
+
+  const addTeacher = async () => {
+    if (!form.name || !form.email || !form.phone || !form.designation) return;
+
+    try {
+      const formData = new FormData();
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone);
+      formData.append("designation", form.designation);
+      if (form.avatar) {
+        formData.append("avatar", form.avatar);
+      }
+      // console.log(form.name)
+      const response = await axios.post(
+        "http://localhost:5000/newteacher",
+        formData,
+        {
+          withCredentials: true, // sends cookies
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
+
+      // Optionally update local state after successful API response
+      setTeachers([...teachers, { ...response.data, id: Date.now() }]);
+
+      // Reset form
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        designation: "",
+        avatar: null,
+      });
+    } catch (error) {
+      console.error("Error adding teacher:", error);
     }
   };
 
-  const addTeacher = () => {
-    if (!form.name || !form.email || !form.phone || !form.designation) return;
-    setTeachers([...teachers, { ...form, id: Date.now() }]); 
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      designation: "",
-      avatar: null,
-    });
-  };
-
-  const deleteTeacher = (id: number) => {
-    setTeachers(teachers.filter((t) => t.id !== id));
-  };
-  const router = useRouter();
-   useEffect(()=>{
-      const cheackLogin= async ()=>{
-       
-        try {
-          const response= await axios.get(`http://localhost:5000/login/me`,{
-            withCredentials: true,
-          })
-          if(response.status==200)
-          {
-            // router.push('/admin/auth/teacher');
-            console.log("auto login")
-          }
-          else{
-            router.push('/admin/login');
-          }
-        } catch (error) {
-          router.push('/admin/login');
+  useEffect(() => {
+    const checkLogin = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/login/me", {
+          withCredentials: true,
+        });
+        if (response.status !== 200) {
+          router.push("/admin/login");
         }
-      };
-      cheackLogin();
-    },[]);
+      } catch {
+        router.push("/admin/login");
+      }
+    };
+    checkLogin();
+  }, [router]);
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -129,24 +147,43 @@ export default function TeachersPage() {
             <div className="flex items-center gap-4">
               {t.avatar ? (
                 <Image
-                  src={t.avatar}
-                  alt="avatar"
-                  width={48}
-                  height={48}
-                  className="rounded-full object-cover"
-                />
+                src={t.avatar}
+                alt="avatar"
+                width={48}
+                height={48}
+                className="rounded-full object-cover"
+              />
+                // <Image
+                //   src={
+                //     typeof t.avatar === "string"
+                //       ? t.avatar
+                //       : URL.createObjectURL(t.avatar)
+                //   }
+                //   alt="avatar"
+                //   width={48}
+                //   height={48}
+                //   className="rounded-full object-cover"
+                // />
               ) : (
                 <div className="w-12 h-12 rounded-full bg-gray-300"></div>
               )}
               <div>
-                <p><strong>Name:</strong> {t.name}</p>
-                <p><strong>Email:</strong> {t.email}</p>
-                <p><strong>Phone:</strong> {t.phone}</p>
-                <p><strong>Designation:</strong> {t.designation}</p>
+                <p>
+                  <strong>Name:</strong> {t.name}
+                </p>
+                <p>
+                  <strong>Email:</strong> {t.email}
+                </p>
+                <p>
+                  <strong>Phone:</strong> {t.phone}
+                </p>
+                <p>
+                  <strong>Designation:</strong> {t.designation}
+                </p>
               </div>
             </div>
             <button
-              onClick={() => deleteTeacher(t.id)}
+              onClick={() => setTeachers(teachers.filter((x) => x.id !== t.id))}
               className="bg-red-500 text-white px-3 py-1 rounded"
             >
               Delete
