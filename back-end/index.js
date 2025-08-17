@@ -8,6 +8,7 @@ const registerRoute=require('./router/registerRoute')
 const loginRouter=require('./router/loginRouter');
 const newTeacherRouter=require('./router/newTeacherRouter');
 const studentSectionRouter=require('./router/studentSectionRouter');
+const checkAuth = require('./middlewares/auth/cheackAuth');
 
 
 dotenv.config();

@@ -29,6 +29,7 @@ export default function BengaliTableReadOnly() {
         console.error("Error fetching data:", error);
       }
     };
+    
     fetchData();
   }, []);
 

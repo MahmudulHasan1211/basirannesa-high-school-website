@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface Section {
   section: string;
@@ -23,8 +24,9 @@ export default function EditableBengaliTable() {
   const [formData, setFormData] = useState<Section>({ section: "", boys: 0, girls: 0 });
 
   const API_URL = "http://localhost:5000/studentsection/api/classes";
-
+  const router = useRouter();
   useEffect(() => {
+    checkLogin();
     fetchData();
   }, []);
 
@@ -33,9 +35,23 @@ export default function EditableBengaliTable() {
       const res = await axios.get(API_URL);
       setClasses(res.data);
     } catch (error) {
+        
       console.error("Error fetching data:", error);
     }
   };
+      const checkLogin = async () => {
+        try {
+          const response = await axios.get("http://localhost:5000/login/me", {
+            withCredentials: true,
+          });
+          if (response.status !== 200) {
+            router.push("/admin/login");
+          }
+        } catch {
+          router.push("/admin/login");
+        }
+      };
+      
 
   // Edit
   const handleEdit = (classIndex: number, sectionIndex: number) => {
@@ -89,7 +105,9 @@ export default function EditableBengaliTable() {
     setClasses(updatedClasses);
 
     try {
-      await axios.put(`${API_URL}/${updatedClasses[classIndex]._id}`, updatedClasses[classIndex]);
+      await axios.delete(`${API_URL}/${updatedClasses[classIndex]._id}`, {
+        data: updatedClasses[classIndex]  // <-- payload goes here
+      });
     } catch (error) {
       console.error("Error deleting section:", error);
     }

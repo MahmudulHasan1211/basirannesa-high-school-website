@@ -41,7 +41,7 @@ export default function Teacher() {
           <div className="bg-[#edf0f2] h-[500px] md:h-[350px] rounded-xl inset-shadow-sm text-center">
             <div className="w-full h-[400px] md:h-[250px] relative mx-auto overflow-hidden">
               <Image
-                src={head}
+                src={'http://localhost:5000/uploads/avatars/avatar-1755331778164-421575962.jpeg'}
                 alt="Picture of the author"
                 fill
                 className="object-cover rounded transition-transform duration-300 hover:scale-110"

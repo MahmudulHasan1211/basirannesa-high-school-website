@@ -9,11 +9,17 @@ interface TeacherForm {
   email: string;
   phone: string;
   designation: string;
-  avatar: File | null; // Store file itself for upload
+  avatar: File | null;
 }
 
-interface Teacher extends TeacherForm {
-  id: number;
+interface Teacher {
+  id: string; // mapped from backend _id
+  name: string;
+  email: string;
+  phone: string;
+  designation: string;
+  avatar?: string; // URL from backend
+  localAvatar?: string; // temporary preview for uploaded file
 }
 
 export default function TeachersPage() {
@@ -46,23 +52,30 @@ export default function TeachersPage() {
       formData.append("email", form.email);
       formData.append("phone", form.phone);
       formData.append("designation", form.designation);
-      if (form.avatar) {
-        formData.append("avatar", form.avatar);
-      }
-      // console.log(form.name)
+      if (form.avatar) formData.append("avatar", form.avatar);
+
       const response = await axios.post(
         "http://localhost:5000/newteacher",
         formData,
         {
-          withCredentials: true, // sends cookies
+          withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
 
-      // Optionally update local state after successful API response
-      setTeachers([...teachers, { ...response.data, id: Date.now() }]);
+      // add new teacher to state
+      setTeachers((prev) => [
+        ...prev,
+        {
+          id: response.data._id,
+          name: response.data.name,
+          email: response.data.email,
+          phone: response.data.phone,
+          designation: response.data.designation,
+          avatar: response.data.avatar,
+        },
+      ]);
 
-      // Reset form
       setForm({
         name: "",
         email: "",
@@ -81,18 +94,51 @@ export default function TeachersPage() {
         const response = await axios.get("http://localhost:5000/login/me", {
           withCredentials: true,
         });
-        if (response.status !== 200) {
-          router.push("/admin/login");
-        }
+        if (response.status !== 200) router.push("/admin/login");
       } catch {
         router.push("/admin/login");
       }
     };
+
+    const fetchTeachers = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/newteacher", {
+          withCredentials: true,
+        });
+        // map _id to id
+        const teachersData = response.data.map((t: { _id: string; name: string; email: string; phone: string; designation: string; avatar?: string }) => ({
+          id: t._id,
+          name: t.name,
+          email: t.email,
+          phone: t.phone,
+          designation: t.designation,
+          avatar: t.avatar,
+        }));
+        setTeachers(teachersData);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     checkLogin();
+    fetchTeachers();
   }, [router]);
 
+  async function handleDelete(id: string) {
+    console.log(id)
+    try {
+      await axios.delete(`http://localhost:5000/newteacher/${id}`, {
+        withCredentials: true,
+      });
+      // Remove from frontend state after successful deletion
+      // setTeachers((prev) => prev.filter((t) => t.id !== id));
+    } catch (error) {
+      console.error("Error deleting teacher:", error);
+    }
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center p-4">
       <h1 className="text-2xl font-bold mb-4">Add Teacher</h1>
       <div className="grid gap-3 mb-6 max-w-md w-full">
         <input
@@ -147,23 +193,12 @@ export default function TeachersPage() {
             <div className="flex items-center gap-4">
               {t.avatar ? (
                 <Image
-                src={t.avatar}
-                alt="avatar"
-                width={48}
-                height={48}
-                className="rounded-full object-cover"
-              />
-                // <Image
-                //   src={
-                //     typeof t.avatar === "string"
-                //       ? t.avatar
-                //       : URL.createObjectURL(t.avatar)
-                //   }
-                //   alt="avatar"
-                //   width={48}
-                //   height={48}
-                //   className="rounded-full object-cover"
-                // />
+                  src={t.avatar} // backend URL
+                  alt="avatar"
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
+                />
               ) : (
                 <div className="w-12 h-12 rounded-full bg-gray-300"></div>
               )}
@@ -183,7 +218,11 @@ export default function TeachersPage() {
               </div>
             </div>
             <button
-              onClick={() => setTeachers(teachers.filter((x) => x.id !== t.id))}
+              onClick={() =>{
+                setTeachers((prev) => prev.filter((x) => x.id !== t.id));
+                handleDelete(t.id);
+              }
+              }
               className="bg-red-500 text-white px-3 py-1 rounded"
             >
               Delete
