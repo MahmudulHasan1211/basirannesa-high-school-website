@@ -55,7 +55,7 @@ export default function TeachersPage() {
       if (form.avatar) formData.append("avatar", form.avatar);
 
       const response = await axios.post(
-        "http://localhost:5000/newteacher",
+        `${process.env.NEXT_PUBLIC_API_URL}/newteacher`,
         formData,
         {
           withCredentials: true,
@@ -91,7 +91,7 @@ export default function TeachersPage() {
   useEffect(() => {
     const checkLogin = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/login/me", {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/login/me`, {
           withCredentials: true,
         });
         if (response.status !== 200) router.push("/admin/login");
@@ -102,7 +102,7 @@ export default function TeachersPage() {
 
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/newteacher", {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/newteacher`, {
           withCredentials: true,
         });
         // map _id to id
@@ -127,7 +127,7 @@ export default function TeachersPage() {
   async function handleDelete(id: string) {
     console.log(id)
     try {
-      await axios.delete(`http://localhost:5000/newteacher/${id}`, {
+      await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/newteacher/${id}`, {
         withCredentials: true,
       });
       // Remove from frontend state after successful deletion

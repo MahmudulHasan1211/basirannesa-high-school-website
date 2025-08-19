@@ -23,7 +23,7 @@ export default function EditableBengaliTable() {
   const [editSectionIndex, setEditSectionIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState<Section>({ section: "", boys: 0, girls: 0 });
 
-  const API_URL = "http://localhost:5000/studentsection/api/classes";
+  const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/studentsection/api/classes`;
   const router = useRouter();
   useEffect(() => {
     checkLogin();
@@ -41,7 +41,7 @@ export default function EditableBengaliTable() {
   };
       const checkLogin = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/login/me", {
+          const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/login/me`, {
             withCredentials: true,
           });
           if (response.status !== 200) {

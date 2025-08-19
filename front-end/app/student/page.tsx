@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import axios from "axios";
 
 interface Section {
@@ -16,26 +13,26 @@ interface ClassGroup {
   sections: Section[];
 }
 
-export default function BengaliTableReadOnly() {
-  const [classes, setClasses] = useState<ClassGroup[]>([]);
-  const API_URL = "http://localhost:5000/studentsection/api/classes";
+async function getClasses(): Promise<ClassGroup[]> {
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/studentsection/api/classes`
+    );
+    return res.data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(API_URL);
-        setClasses(res.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    
-    fetchData();
-  }, []);
+export default async function BengaliTableReadOnly() {
+  const classes = await getClasses(); 
 
   return (
     <div className="p-6">
-      <h1 className="text-lg text-center font-bold mb-4">সকল শ্রেণীর শিক্ষার্থীর তথ্য</h1>
+      <h1 className="text-lg text-center font-bold mb-4">
+        সকল শ্রেণীর শিক্ষার্থীর তথ্য
+      </h1>
 
       <table className="border-collapse border border-gray-400 w-full text-center">
         <thead>
@@ -54,10 +51,16 @@ export default function BengaliTableReadOnly() {
               <tr key={`${cls._id}-${sectionIndex}`}>
                 {sectionIndex === 0 && (
                   <>
-                    <td rowSpan={cls.sections.length} className="border border-gray-400 p-2">
+                    <td
+                      rowSpan={cls.sections.length}
+                      className="border border-gray-400 p-2"
+                    >
                       {cls.serialNo}
                     </td>
-                    <td rowSpan={cls.sections.length} className="border border-gray-400 p-2">
+                    <td
+                      rowSpan={cls.sections.length}
+                      className="border border-gray-400 p-2"
+                    >
                       {cls.className}
                     </td>
                   </>
@@ -65,7 +68,9 @@ export default function BengaliTableReadOnly() {
                 <td className="border border-gray-400 p-2">{sec.section}</td>
                 <td className="border border-gray-400 p-2">{sec.boys}</td>
                 <td className="border border-gray-400 p-2">{sec.girls}</td>
-                <td className="border border-gray-400 p-2">{sec.boys + sec.girls}</td>
+                <td className="border border-gray-400 p-2">
+                  {sec.boys + sec.girls}
+                </td>
               </tr>
             ))
           )}

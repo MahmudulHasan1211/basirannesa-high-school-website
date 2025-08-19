@@ -14,7 +14,7 @@ export default function TeacherLogin() {
     const cheackLogin= async ()=>{
      
       try {
-        const response= await axios.get(`http://localhost:5000/login/me`,{
+        const response= await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/login/me`,{
           withCredentials: true,
         })
         if(response.status==200)
@@ -37,7 +37,7 @@ export default function TeacherLogin() {
     console.log("Teacher Email:", email);
     console.log("Password:", password);
     try {
-      const response= await axios.post(`http://localhost:5000/login`, {email,password}, {
+      const response= await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {email,password}, {
         withCredentials: true,
       })
       console.log(response);

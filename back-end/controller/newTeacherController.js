@@ -1,6 +1,8 @@
 const User = require("../models/Teachers");
 const {unlink}=require('fs')
 const path = require("path");
+
+
 async function newTeacher(req, res, next) {
   // console.log(req.body);
   // res.status(200).json({msg:req.file.filename})
@@ -26,6 +28,7 @@ async function getTeacher(req, res, next) {
     res.status(500).json({ error: err.message });
   }
 }
+
 async function deleteTeacher(req, res, next) {
   const { id } = req.params;
   try {
