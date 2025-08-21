@@ -1,5 +1,5 @@
 import Image from "next/image";
-import head from "../../public/head.jpeg";
+
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
 
@@ -33,7 +33,7 @@ async function getTeachers() {
       })
     );
   } catch (error) {
-    console.error("Fetch error:", error);
+    console.log("Fetch error:", error);
     return [];
   }
 }
@@ -48,7 +48,7 @@ export default async function TeacherPage() {
       <div className="w-[90%] h-auto p-3 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-7">        
           {/* Dynamic teachers */}
-          {teachers.map((teacher: { id: Key | null | undefined; avatar: string | null; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; designation: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; email: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; phone: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) => (
+          {teachers.map((teacher: { id: Key | null | undefined; avatar: string | null; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | null | undefined> | null | undefined; designation: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | null | undefined> | null | undefined; email: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | null | undefined> | null | undefined; phone: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) => (
             <div
               key={teacher.id}
               className="bg-[#edf0f2] h-auto md:h-auto rounded-xl inset-shadow-sm text-center"
@@ -58,7 +58,7 @@ export default async function TeacherPage() {
                 {teacher.avatar ? (
                   <Image
                     src={`${process.env.NEXT_PUBLIC_IMAGE}${teacher.avatar}`}
-                    alt={teacher.name}
+                    alt={typeof teacher.name === "string" ? teacher.name : ""}
                     fill
                     className="object-cover rounded transition-transform duration-300 hover:scale-110"
                   />

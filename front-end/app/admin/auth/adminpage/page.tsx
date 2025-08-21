@@ -1,36 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import axios from "axios";
+import { useState } from "react";
 
-export default function TeacherLogin() {
+export default function Adminpage() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-   const router = useRouter();
 
-  useEffect(()=>{
-    const cheackLogin= async ()=>{
+//   useEffect(()=>{
+//     const cheackLogin= async ()=>{
      
-      try {
-        const response= await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/login/me`,{
-          withCredentials: true,
-        })
-        if(response.status==200)
-        {
-          router.push('/admin/auth/home');
-        }
-        else{
-          router.push('/admin/login');
-        }
-      } catch (error) {
-        console.log(error);
-        router.push('/admin/login');
-      }
-    };
-    cheackLogin();
-  });
+//       try {
+//         const response= await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/login/me`,{
+//           withCredentials: true,
+//         })
+//         if(response.status==200)
+//         {
+//           router.push('/admin/auth/home');
+//         }
+//         else{
+//           router.push('/admin/login');
+//         }
+//       } catch (error) {
+//         router.push('/admin/login');
+//       }
+//     };
+//     cheackLogin();
+//   },[]);
 
   // Correct event type for form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,11 +36,11 @@ export default function TeacherLogin() {
     console.log("Teacher Email:", email);
     console.log("Password:", password);
     try {
-      const response= await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {email,password}, {
+      const response= await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, {name,email,password}, {
         withCredentials: true,
       })
       console.log(response);
-      router.push('/admin/auth/home');
+      alert('success')
     } catch (error) {
       console.log(error)
     }
@@ -55,6 +53,18 @@ export default function TeacherLogin() {
         <h2 className="text-2xl font-bold text-center mb-6">Admin Login</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+                      {/* name */}
+          <div>
+            <label className="block text-sm font-medium mb-1">Name</label>
+            <input
+              type="text"
+              placeholder="Enter your email"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
           {/* Email */}
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
